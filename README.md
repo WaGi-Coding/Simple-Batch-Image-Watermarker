@@ -18,6 +18,8 @@ The watermark gets automatically resized to fit, if the Image to get watermarked
 
 You can also Drag & Drop a Folder/Image onto the Textboxes, instead of manually inputting or searching.
 
+The "Watermarked-Folder" will end up inside your input folder. You can change the name of that folder and change the suffix of watermarked images.
+All values get saved & loaded, so it's more comfortable to use.
 
 ![Simple-Image-Watermarker](https://user-images.githubusercontent.com/38970388/211128456-40ccc9bc-3d26-448e-ada2-a71bc3d0cb1f.PNG)
 
