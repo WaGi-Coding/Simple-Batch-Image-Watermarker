@@ -28,6 +28,7 @@ All values get saved & loaded, so it's more comfortable to use.
 
 
 ToDo:
+  - Add Exif Data editing
   - Add SVG Watermark Support
   - Add GIF Watermarking Support
   - Procentual sizing
