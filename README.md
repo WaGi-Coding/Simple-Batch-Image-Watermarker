@@ -21,11 +21,13 @@ You can also Drag & Drop a Folder/Image onto the Textboxes, instead of manually 
 The "Watermarked-Folder" will end up inside your input folder. You can change the name of that folder and change the suffix of watermarked images.
 All values get saved & loaded, so it's more comfortable to use.
 
-![Simple-Image-Watermarker](https://user-images.githubusercontent.com/38970388/211139365-f60c7289-44a6-4b20-a684-2e50558b9186.PNG)
+
+![Simple-Image-Watermarker](https://user-images.githubusercontent.com/38970388/211139620-7ace1a9c-b3a8-4747-bf30-16ef3600d8e4.PNG)
 
 ![Watermarked-Image](https://user-images.githubusercontent.com/38970388/211139373-4f989ef5-bab5-4b86-8c6e-1c8c90abb053.png)
 
-
+Note:
+  The Copyright data is not visible in Windows File Explorer's Details Tab, instead, check it with [jimpl.com](https://jimpl.com) for example
 
 ToDo:
   - Add SVG Watermark Support
