@@ -1,4 +1,15 @@
 # Simple Batch Image Watermarker
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/WaGi-Coding/Simple-Batch-Image-Watermarker?label=latest%20release&style=for-the-badge)
+![GitHub all releases](https://img.shields.io/github/downloads/WaGi-Coding/Simple-Batch-Image-Watermarker/total?label=Github%20Release%20Downloads&style=for-the-badge)
+
+![GitHub Repo stars](https://img.shields.io/github/stars/WaGi-Coding/Simple-Batch-Image-Watermarker?style=social)
+
+
+<p align="center">
+  <a href="https://github.com/WaGi-Coding/Simple-Batch-Image-Watermarker/releases/"><img alt="Download" src="https://i.imgur.com/IMSXFnA.png"/></a>
+</p>
+
+---
 
 ## Simple Batch Image Watermarker for Windows supporting Watermarking of a whole folders images.
 
