@@ -883,5 +883,17 @@ namespace Simple_Image_Watermarker
 
             return result;
         }
+
+        private void mainPnl_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = lblMode;
+            lblMode.Focus();
+        }
+
+        private void Frm_Main_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = lblMode;
+            lblMode.Focus();
+        }
     }
 }

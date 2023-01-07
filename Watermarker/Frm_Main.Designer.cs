@@ -524,6 +524,7 @@
             this.mainPnl.Name = "mainPnl";
             this.mainPnl.Size = new System.Drawing.Size(567, 388);
             this.mainPnl.TabIndex = 20;
+            this.mainPnl.Click += new System.EventHandler(this.mainPnl_Click);
             // 
             // label5
             // 
@@ -566,6 +567,7 @@
             this.MinimumSize = new System.Drawing.Size(580, 480);
             this.Name = "Frm_Main";
             this.Text = "Simple Image Watermarker";
+            this.Click += new System.EventHandler(this.Frm_Main_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMargin)).EndInit();
