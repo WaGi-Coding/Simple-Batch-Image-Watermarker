@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
@@ -111,6 +112,7 @@ namespace Simple_Image_Watermarker
 
 
             numericUpDownMargin.Value = Convert.ToDecimal(Properties.Settings.Default.margin);
+            numericUpDownRotation.Value = Convert.ToDecimal(Properties.Settings.Default.watermarkRot);
             trackBarOpacity.Value = Properties.Settings.Default.opacity;
             trackBarScale.Value = Properties.Settings.Default.watermarkScale;
             
@@ -165,6 +167,47 @@ namespace Simple_Image_Watermarker
         WatermarkMode mode = WatermarkMode.WholeFolder;
         WatermarkPosition position = WatermarkPosition.BottomLeft;
 
+
+        public static Image RotateImage(Image image, float angle)
+        {
+            // Calculate the size of the rotated image
+            double radians = angle * Math.PI / 180;
+            double cos = Math.Abs(Math.Cos(radians));
+            double sin = Math.Abs(Math.Sin(radians));
+            int width = (int)(image.Width * cos + image.Height * sin);
+            int height = (int)(image.Width * sin + image.Height * cos);
+
+            // Create a new empty bitmap to hold rotated image
+            Bitmap rotatedImage = new Bitmap(width, height);
+
+            // Make a graphics object from the empty bitmap
+            using (Graphics g = Graphics.FromImage(rotatedImage))
+            {
+                // Clear the image with transparent background
+                g.Clear(Color.Transparent);
+
+                // Set the interpolation mode to high quality
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+
+                // Translate the image to the center of the output bitmap
+                g.TranslateTransform(rotatedImage.Width / 2, rotatedImage.Height / 2);
+
+                // Rotate the image
+                g.RotateTransform(angle);
+
+                // Translate the image back to its original position
+                g.TranslateTransform(-image.Width / 2, -image.Height / 2);
+
+                // Draw the image onto the graphics object
+                g.DrawImage(image, 0, 0, image.Width, image.Height);
+            }
+
+            // Return the image
+            return (Image)rotatedImage;
+        }
+
+
+
         private void AddWatermark(String imagePath, String watermarkImagePath, float opacity, float scale, int margin, String suffix, String folderName)
         {
             String fullPathImg = Path.GetFullPath(imagePath);
@@ -185,7 +228,7 @@ namespace Simple_Image_Watermarker
 
             // Load the source image and the watermark image
             using (Image image = Image.FromFile(imagePath))
-            using (Image watermarkImage = Image.FromFile(watermarkImagePath))
+            using (Image watermarkImage = RotateImage(Image.FromFile(watermarkImagePath), Convert.ToSingle(numericUpDownRotation.Value)))
             {
                 // Calculate the scale factor for the watermark
                 float finalScale = scale;
@@ -236,9 +279,6 @@ namespace Simple_Image_Watermarker
                             //int ccc = 0;
                             while (y > (height + margin) * -1)
                             {
-                                //Console.WriteLine($"{x}, {y}");
-                                //ccc++;
-                                //Console.WriteLine(ccc);
                                 // Draw the watermark image onto the source image using the DrawImage method
                                 imageGraphics.DrawImage(resizedWatermark, new Rectangle(x, y, width, height),
                                     0, 0, width, height, GraphicsUnit.Pixel, imageAttributes);
@@ -253,9 +293,6 @@ namespace Simple_Image_Watermarker
                             //ccc = 0;
                             while (y < (height + margin) + image.Height)
                             {
-                                //Console.WriteLine($"{x}, {y}");
-                                //ccc++;
-                                //Console.WriteLine(ccc);
                                 // Draw the watermark image onto the source image using the DrawImage method
                                 imageGraphics.DrawImage(resizedWatermark, new Rectangle(x, y, width, height),
                                     0, 0, width, height, GraphicsUnit.Pixel, imageAttributes);
@@ -277,9 +314,6 @@ namespace Simple_Image_Watermarker
                             //int ccc = 0;
                             while (y > (height + margin) * -1)
                             {
-                                //Console.WriteLine($"{x}, {y}");
-                                //ccc++;
-                                //Console.WriteLine(ccc);
                                 // Draw the watermark image onto the source image using the DrawImage method
                                 imageGraphics.DrawImage(resizedWatermark, new Rectangle(x, y, width, height),
                                     0, 0, width, height, GraphicsUnit.Pixel, imageAttributes);
@@ -294,9 +328,6 @@ namespace Simple_Image_Watermarker
                             //ccc = 0;
                             while (y < (height + margin) + image.Height)
                             {
-                                //Console.WriteLine($"{x}, {y}");
-                                //ccc++;
-                                //Console.WriteLine(ccc);
                                 // Draw the watermark image onto the source image using the DrawImage method
                                 imageGraphics.DrawImage(resizedWatermark, new Rectangle(x, y, width, height),
                                     0, 0, width, height, GraphicsUnit.Pixel, imageAttributes);
@@ -335,7 +366,7 @@ namespace Simple_Image_Watermarker
 
             // Load the source image and the watermark image
             using (Image image = Image.FromFile(imagePath))
-            using (Image watermarkImage = Image.FromFile(watermarkImagePath))
+            using (Image watermarkImage = RotateImage(Image.FromFile(watermarkImagePath), Convert.ToSingle(numericUpDownRotation.Value)))
             {
                 // Calculate the scale factor for the watermark
                 float finalScale = scale;
@@ -770,6 +801,7 @@ namespace Simple_Image_Watermarker
                     break;
             }
             Properties.Settings.Default.margin = Convert.ToInt32(numericUpDownMargin.Value);
+            Properties.Settings.Default.watermarkRot = Convert.ToInt32(numericUpDownRotation.Value);
             Properties.Settings.Default.opacity = trackBarOpacity.Value;
             Properties.Settings.Default.watermarkScale = trackBarScale.Value;
 
@@ -837,6 +869,12 @@ namespace Simple_Image_Watermarker
         private void numericUpDownMargin_ValueChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.margin = Convert.ToInt32(numericUpDownMargin.Value);
+            Properties.Settings.Default.Save();
+        }
+
+        private void numericUpDownRotation_ValueChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.watermarkRot = Convert.ToInt32(numericUpDownRotation.Value);
             Properties.Settings.Default.Save();
         }
 

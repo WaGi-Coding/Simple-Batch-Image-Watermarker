@@ -71,6 +71,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numericUpDownRotation = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMargin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarOpacity)).BeginInit();
@@ -78,6 +80,7 @@
             this.panel2.SuspendLayout();
             this.mainPnl.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRotation)).BeginInit();
             this.SuspendLayout();
             // 
             // tbImgDirPath
@@ -136,6 +139,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.numericUpDownRotation);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.numericUpDownMargin);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.rbBR);
@@ -156,7 +161,7 @@
             // numericUpDownMargin
             // 
             this.numericUpDownMargin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.numericUpDownMargin.Location = new System.Drawing.Point(272, 88);
+            this.numericUpDownMargin.Location = new System.Drawing.Point(119, 88);
             this.numericUpDownMargin.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -170,6 +175,7 @@
             this.numericUpDownMargin.Name = "numericUpDownMargin";
             this.numericUpDownMargin.Size = new System.Drawing.Size(87, 20);
             this.numericUpDownMargin.TabIndex = 30;
+            this.numericUpDownMargin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownMargin.Value = new decimal(new int[] {
             10,
             0,
@@ -180,7 +186,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(224, 90);
+            this.label1.Location = new System.Drawing.Point(73, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 8;
@@ -464,7 +470,7 @@
             this.tbSuffix.Location = new System.Drawing.Point(428, 219);
             this.tbSuffix.Name = "tbSuffix";
             this.tbSuffix.Size = new System.Drawing.Size(131, 20);
-            this.tbSuffix.TabIndex = 31;
+            this.tbSuffix.TabIndex = 35;
             this.tbSuffix.Text = "_wm";
             // 
             // tbWatermarkFolderName
@@ -473,7 +479,7 @@
             this.tbWatermarkFolderName.Location = new System.Drawing.Point(428, 270);
             this.tbWatermarkFolderName.Name = "tbWatermarkFolderName";
             this.tbWatermarkFolderName.Size = new System.Drawing.Size(131, 20);
-            this.tbWatermarkFolderName.TabIndex = 32;
+            this.tbWatermarkFolderName.TabIndex = 36;
             this.tbWatermarkFolderName.Text = "watermarked";
             // 
             // label3
@@ -554,6 +560,35 @@
             this.websiteToolStripMenuItem.MouseLeave += new System.EventHandler(this.ToolStripMenuItem_MouseLeave);
             this.websiteToolStripMenuItem.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ToolStripMenuItem_MouseMove);
             // 
+            // numericUpDownRotation
+            // 
+            this.numericUpDownRotation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUpDownRotation.Location = new System.Drawing.Point(272, 88);
+            this.numericUpDownRotation.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.numericUpDownRotation.Minimum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownRotation.Name = "numericUpDownRotation";
+            this.numericUpDownRotation.Size = new System.Drawing.Size(87, 20);
+            this.numericUpDownRotation.TabIndex = 32;
+            this.numericUpDownRotation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownRotation.ValueChanged += new System.EventHandler(this.numericUpDownRotation_ValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(218, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Rotation:";
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,6 +614,7 @@
             this.mainPnl.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRotation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -627,6 +663,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown numericUpDownRotation;
+        private System.Windows.Forms.Label label6;
     }
 }
 
