@@ -730,6 +730,7 @@ namespace Simple_Image_Watermarker
             if (!isImageExt(tbWatermarkImage.Text))
             {
                 MessageBox.Show($"Provided Watermark Image \"{tbWatermarkImage.Text}\" has unsupported Extension!");
+                return;
             }
 
 
@@ -786,6 +787,7 @@ namespace Simple_Image_Watermarker
                 if (!isImageExt(tbImgDirPath.Text))
                 {
                     MessageBox.Show($"Provided Image \"{tbImgDirPath.Text}\" has unsupported Extension!");
+                    return;
                 }
 
                 mainPnl.Enabled = false;
