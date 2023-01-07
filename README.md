@@ -21,10 +21,9 @@ You can also Drag & Drop a Folder/Image onto the Textboxes, instead of manually 
 The "Watermarked-Folder" will end up inside your input folder. You can change the name of that folder and change the suffix of watermarked images.
 All values get saved & loaded, so it's more comfortable to use.
 
-![Simple-Image-Watermarker](https://user-images.githubusercontent.com/38970388/211128456-40ccc9bc-3d26-448e-ada2-a71bc3d0cb1f.PNG)
+![Simple-Image-Watermarker](https://user-images.githubusercontent.com/38970388/211134938-4f41e857-0ae6-445d-bd4f-4ef77389a2e2.PNG)
 
-
-![Watermarked-Image](https://user-images.githubusercontent.com/38970388/211128512-6f7dbb70-393e-4a81-b579-6923dae5014c.png)
+![Watermarked-Image](https://user-images.githubusercontent.com/38970388/211134985-5b9bd087-39b2-4d3a-9d0f-a9fffc74c007.png)
 
 
 ToDo:
