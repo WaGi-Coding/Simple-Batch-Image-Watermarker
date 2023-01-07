@@ -21,13 +21,13 @@ You can also Drag & Drop a Folder/Image onto the Textboxes, instead of manually 
 The "Watermarked-Folder" will end up inside your input folder. You can change the name of that folder and change the suffix of watermarked images.
 All values get saved & loaded, so it's more comfortable to use.
 
-![Simple-Image-Watermarker](https://user-images.githubusercontent.com/38970388/211134938-4f41e857-0ae6-445d-bd4f-4ef77389a2e2.PNG)
+![Simple-Image-Watermarker](https://user-images.githubusercontent.com/38970388/211139365-f60c7289-44a6-4b20-a684-2e50558b9186.PNG)
 
-![Watermarked-Image](https://user-images.githubusercontent.com/38970388/211134985-5b9bd087-39b2-4d3a-9d0f-a9fffc74c007.png)
+![Watermarked-Image](https://user-images.githubusercontent.com/38970388/211139373-4f989ef5-bab5-4b86-8c6e-1c8c90abb053.png)
+
 
 
 ToDo:
-  - Add Exif Data editing
   - Add SVG Watermark Support
   - Add GIF Watermarking Support
   - Procentual sizing
