@@ -8,6 +8,10 @@
 <p align="center">
   <a href="https://github.com/WaGi-Coding/Simple-Batch-Image-Watermarker/releases/"><img alt="Download" src="https://i.imgur.com/IMSXFnA.png"/></a>
 </p>
+<p align="center">
+  <a href="https://github.com/WaGi-Coding/Simple-Batch-Image-Watermarker/releases/"><img alt="Download" src="https://user-images.githubusercontent.com/38970388/211140405-16262cbf-8eb2-4f88-b1b8-b6da07d1b5aa.png"/></a>
+</p>
+
 
 ---
 
