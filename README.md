@@ -35,5 +35,5 @@ Note:
 
 ToDo:
   - Add SVG Watermark Support
-  - Add GIF Watermarking Support
+  - Add GIF, BMP, etc. Watermarking Support
   - Procentual sizing
