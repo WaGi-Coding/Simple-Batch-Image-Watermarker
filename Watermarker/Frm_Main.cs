@@ -141,8 +141,8 @@ namespace Simple_Image_Watermarker
 
             // Image files|*.bmp;*.dib;*.rle;*.jpg;*.jpeg;*.jpe;*.jfif;*.gif;*.tif;*.tiff;*.png|BMP files (*.bmp;*.dib;*.rle)|*.bmp;*.dib;*.rle|JPEG files (*.jpg;*.jpeg;*.jpe;*.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif|GIF files (*.gif)|*.gif|TIFF files (*.tif;*.tiff)|*.tif;*.tiff|PNG files (*.png)|*.png
             //Console.WriteLine(GetImageFilter());
-            openFileDialogImage.Filter = "Image files|*.bmp;*.dib;*.rle;*.jpg;*.jpeg;*.jpe;*.jfif;*.gif;*.tif;*.tiff;*.png|BMP files (*.bmp;*.dib;*.rle)|*.bmp;*.dib;*.rle|JPEG files (*.jpg;*.jpeg;*.jpe;*.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif|GIF files (*.gif)|*.gif|TIFF files (*.tif;*.tiff)|*.tif;*.tiff|PNG files (*.png)|*.png";
-            openFileDialogWatermarkImage.Filter = "Image files|*.bmp;*.dib;*.rle;*.jpg;*.jpeg;*.jpe;*.jfif;*.gif;*.tif;*.tiff;*.png|BMP files (*.bmp;*.dib;*.rle)|*.bmp;*.dib;*.rle|JPEG files (*.jpg;*.jpeg;*.jpe;*.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif|GIF files (*.gif)|*.gif|TIFF files (*.tif;*.tiff)|*.tif;*.tiff|PNG files (*.png)|*.png";
+            openFileDialogImage.Filter = "Image files|*.jpg;*.jpeg;*.jpe;*.jfif;*.tif;*.tiff;*.png|JPEG files (*.jpg;*.jpeg;*.jpe;*.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif|TIFF files (*.tif;*.tiff)|*.tif;*.tiff|PNG files (*.png)|*.png";
+            openFileDialogWatermarkImage.Filter = "Image files|*.jpg;*.jpeg;*.jpe;*.jfif;*.tif;*.tiff;*.png|JPEG files (*.jpg;*.jpeg;*.jpe;*.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif|TIFF files (*.tif;*.tiff)|*.tif;*.tiff|PNG files (*.png)|*.png";
         }
 
         enum WatermarkMode
@@ -690,7 +690,7 @@ namespace Simple_Image_Watermarker
 
             string ext = Path.GetExtension(path);
 
-            string pattern = @"(?i)\.(bmp|dib|rle|jpg|jpeg|jpe|jfif|gif|tif|tiff|png)$";
+            string pattern = @"(?i)\.(jpg|jpeg|jpe|jfif|tif|tiff|png)$";
             Regex regex = new Regex(pattern);
 
             bool containsMatch = regex.IsMatch(ext);
