@@ -98,6 +98,7 @@ namespace Simple_Image_Watermarker
                     break;
             }
 
+            tbCopyright.Text = Properties.Settings.Default.copyRightString;
             tbSuffix.Text = Properties.Settings.Default.suffix;
             tbWatermarkFolderName.Text = Properties.Settings.Default.watermarkedFolderName;
 
@@ -339,11 +340,37 @@ namespace Simple_Image_Watermarker
                         }
                     }
                 }
+                if (!String.IsNullOrWhiteSpace(tbCopyright.Text))
+                {
+                    EditExifCopyright(image, tbCopyright.Text);
+                }
 
                 image.Save(fullPathWatermarkedImage);
             }
 
 
+        }
+
+        //My SetProperty code... (for ASCII property items only!)
+        //Exif 2.2 requires that ASCII property items terminate with a null (0x00).
+        private void SetProperty(ref System.Drawing.Imaging.PropertyItem prop, int iId, string sTxt)
+        {
+            int iLen = sTxt.Length + 1;
+            byte[] bTxt = new Byte[iLen];
+            for (int i = 0; i < iLen - 1; i++)
+                bTxt[i] = (byte)sTxt[i];
+            bTxt[iLen - 1] = 0x00;
+            prop.Id = iId;
+            prop.Type = 2;
+            prop.Value = bTxt;
+            prop.Len = iLen;
+        }
+
+        public void EditExifCopyright(Image image, string copyright)
+        {
+            System.Drawing.Imaging.PropertyItem prop = image.PropertyItems[0];
+            SetProperty(ref prop, 33432, copyright);
+            image.SetPropertyItem(prop);
         }
 
         private void AddWatermark(String imagePath, String watermarkImagePath, WatermarkPosition position, float opacity, float scale, int margin, String suffix, String folderName)
@@ -481,6 +508,11 @@ namespace Simple_Image_Watermarker
                         imageGraphics.DrawImage(resizedWatermark, new Rectangle(x, y, width, height),
                             0, 0, width, height, GraphicsUnit.Pixel, imageAttributes);
                     }
+                }
+
+                if (!String.IsNullOrWhiteSpace(tbCopyright.Text))
+                {
+                    EditExifCopyright(image, tbCopyright.Text);
                 }
 
                 image.Save(fullPathWatermarkedImage);
@@ -769,6 +801,7 @@ namespace Simple_Image_Watermarker
             // Save all
             Properties.Settings.Default.mode = (int)mode;
             Properties.Settings.Default.position = (int)position;
+            Properties.Settings.Default.copyRightString = tbCopyright.Text;
             Properties.Settings.Default.suffix = tbSuffix.Text;
             Properties.Settings.Default.watermarkedFolderName = tbWatermarkFolderName.Text;
 

@@ -166,5 +166,17 @@ namespace Simple_Image_Watermarker.Properties {
                 this["watermarkRot"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string copyRightString {
+            get {
+                return ((string)(this["copyRightString"]));
+            }
+            set {
+                this["copyRightString"] = value;
+            }
+        }
     }
 }

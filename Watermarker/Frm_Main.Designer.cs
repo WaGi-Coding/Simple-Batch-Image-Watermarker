@@ -73,6 +73,8 @@
             this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numericUpDownRotation = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbCopyright = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMargin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarOpacity)).BeginInit();
@@ -466,27 +468,30 @@
             // 
             // tbSuffix
             // 
-            this.tbSuffix.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSuffix.Location = new System.Drawing.Point(428, 219);
+            this.tbSuffix.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbSuffix.Location = new System.Drawing.Point(373, 226);
             this.tbSuffix.Name = "tbSuffix";
-            this.tbSuffix.Size = new System.Drawing.Size(131, 20);
+            this.tbSuffix.Size = new System.Drawing.Size(186, 20);
             this.tbSuffix.TabIndex = 35;
             this.tbSuffix.Text = "_wm";
             // 
             // tbWatermarkFolderName
             // 
-            this.tbWatermarkFolderName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbWatermarkFolderName.Location = new System.Drawing.Point(428, 270);
+            this.tbWatermarkFolderName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbWatermarkFolderName.Location = new System.Drawing.Point(373, 270);
             this.tbWatermarkFolderName.Name = "tbWatermarkFolderName";
-            this.tbWatermarkFolderName.Size = new System.Drawing.Size(131, 20);
+            this.tbWatermarkFolderName.Size = new System.Drawing.Size(186, 20);
             this.tbWatermarkFolderName.TabIndex = 36;
             this.tbWatermarkFolderName.Text = "watermarked";
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(425, 203);
+            this.label3.Location = new System.Drawing.Point(376, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 18;
@@ -494,9 +499,10 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(425, 254);
+            this.label4.Location = new System.Drawing.Point(376, 254);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 13);
             this.label4.TabIndex = 19;
@@ -507,6 +513,8 @@
             this.mainPnl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPnl.Controls.Add(this.label7);
+            this.mainPnl.Controls.Add(this.tbCopyright);
             this.mainPnl.Controls.Add(this.label5);
             this.mainPnl.Controls.Add(this.lblMode);
             this.mainPnl.Controls.Add(this.tbImgDirPath);
@@ -589,6 +597,26 @@
             this.label6.TabIndex = 31;
             this.label6.Text = "Rotation:";
             // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(376, 170);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 13);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Metadata Copyright:";
+            // 
+            // tbCopyright
+            // 
+            this.tbCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCopyright.Location = new System.Drawing.Point(373, 186);
+            this.tbCopyright.Name = "tbCopyright";
+            this.tbCopyright.Size = new System.Drawing.Size(186, 20);
+            this.tbCopyright.TabIndex = 34;
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,6 +693,8 @@
         private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown numericUpDownRotation;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbCopyright;
     }
 }
 
