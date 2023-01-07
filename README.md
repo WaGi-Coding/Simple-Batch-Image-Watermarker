@@ -16,5 +16,5 @@ You can also Drag & Drop a Folder/Image onto the Textboxes, instead of manually 
 
 ToDo:
   - Add SVG Watermark Support
-  - Add GIF Watermark Support
+  - Add GIF Watermarking Support
   - Procentual sizing
