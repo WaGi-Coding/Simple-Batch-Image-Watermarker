@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("WaGi-Coding")]
 [assembly: AssemblyProduct("Taki7o7's Simple Iamge Watermarker")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyCopyright("Copyright © 2023 WaGi-Coding")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

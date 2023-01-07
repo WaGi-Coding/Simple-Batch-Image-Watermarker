@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Watermarker
+namespace Simple_Image_Watermarker
 {
     internal static class Program
     {

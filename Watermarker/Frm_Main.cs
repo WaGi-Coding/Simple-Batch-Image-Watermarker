@@ -15,7 +15,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
-namespace Watermarker
+namespace Simple_Image_Watermarker
 {
     public partial class Frm_Main : Form
     {

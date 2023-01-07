@@ -1,4 +1,4 @@
-﻿namespace Watermarker
+﻿namespace Simple_Image_Watermarker
 {
     partial class Frm_Main
     {
