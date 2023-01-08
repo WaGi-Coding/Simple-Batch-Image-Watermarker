@@ -208,7 +208,7 @@ namespace Simple_Image_Watermarker
         }
 
 
-
+        // Repeated watermark
         private void AddWatermark(String imagePath, String watermarkImagePath, float opacity, float scale, int margin, String suffix, String folderName)
         {
             String fullPathImg = Path.GetFullPath(imagePath);
@@ -373,6 +373,7 @@ namespace Simple_Image_Watermarker
             image.SetPropertyItem(prop);
         }
 
+        // Positioned Watermark
         private void AddWatermark(String imagePath, String watermarkImagePath, WatermarkPosition position, float opacity, float scale, int margin, String suffix, String folderName)
         {
             String fullPathImg = Path.GetFullPath(imagePath);
