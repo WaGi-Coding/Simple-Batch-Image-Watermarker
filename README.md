@@ -31,7 +31,7 @@ All values get saved & loaded, so it's more comfortable to use.
 ![Watermarked-Image](https://user-images.githubusercontent.com/38970388/211139373-4f989ef5-bab5-4b86-8c6e-1c8c90abb053.png)
 
 Note:
-  The Copyright data is not visible in Windows File Explorer's Details Tab, instead, check it with [jimpl.com](https://jimpl.com) for example
+  The Copyright data is not visible in Windows File Explorer's Details Tab for PNG files, as PNG normally does not have EXIF data. Instead, you can check it with [jimpl.com](https://jimpl.com) for example. For others, you should see it in details tab. It only supports ASCII!
 
 ToDo:
   - Add SVG Watermark Support
