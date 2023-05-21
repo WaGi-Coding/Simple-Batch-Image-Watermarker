@@ -15,6 +15,15 @@
 
 ---
 
+## What is this for?
+If you want to watermark your images, you can use this tool.
+- It allows you to watermark all images inside a folder.
+- It allows you to watermark single images.
+- You can use your own watermark image.
+- It also allows you to write a EXIF Copyright Text.
+
+
+
 ## Simple Batch Image Watermarker for Windows supporting Watermarking of a whole folders images.
 
 The Repeat-Mode starts drawing from the image center, unlike others who just draw starting from top-left.
